@@ -1,0 +1,30 @@
+# Builds
+*.dll
+*.exe
+*.o
+*.out
+*.so
+*.test
+/build
+
+# Databases
+*.db
+*.sqlite
+
+# Environment
+.env*
+!.env.example
+
+# Runtime
+__pycache__
+
+# Tools
+*.swp
+*.tmp
+*.prof
+*.trace
+tags*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
