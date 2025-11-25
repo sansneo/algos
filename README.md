@@ -20,15 +20,15 @@ In [algorithms.py](./algorithms.py).
 |-----------|-----------------|-------|
 | Simple Search | O(n) | Linear search through each element, works on unsorted data |
 | Binary Search | O(log n) | Way faster then Simple Search, but requires sorted data |
-| Depth-First Search (DFS) | O(V + E) <br> where V = "vertices" and E = "edges" | Uses a stack to find a path in unweighted graphs by exploring nodes as deep as possible before backtracking, good for cycle detection |
-| Breadth-First Search (BFS) | O(V + E) <br> where V = "vertices" and E = "edges" | Uses a queue to find the shortest path in unweighted graphs by exploring each branch by a certain depth before going deeper |
-| A* Search | O(b^d) <br> where b = "branching factor" and d = "depth" | Uses admissible heuristics (domain's problem specific) to find the optimal path in weighted graphs |
+| Depth-First Search (DFS) | O(V + E) where <br> V = "vertices" <br> and E = "edges" | Uses a stack to find a path in unweighted graphs by exploring nodes as deep as possible before backtracking, good for cycle detection |
+| Breadth-First Search (BFS) | O(V + E) where <br> V = "vertices" <br> and E = "edges" | Uses a queue to find the shortest path in unweighted graphs by exploring each branch by a certain depth before going deeper |
+| A* Search | O(b^d) <br> where b = "branching factor" <br> and d = "depth" | Uses admissible heuristics (domain's problem specific) to find the optimal path in weighted graphs |
 
 ### Sort
 | Algorithm | Time Complexity | Notes |
 |-----------|-----------------|-------|
 | Selection Sort | O(n^2) | In-place comparison sort, finds minimum element each iteration |
-| Quick Sort | O(n * log n) <br> average case and O(n^2) worst case | Divide and conquer |
+| Quick Sort | O(n * log n) average case <br> and O(n^2) worst case | Divide and conquer |
 <!-- | Bubble Sort | O(n^2) | In-place, repeatedly swaps adjacent elements, stable | -->
 <!-- | Merge Sort | O(n * log n) | Divide and conquer, stable, good for external sorting | -->
 <!-- | Heap Sort | O(n * log n) | In-place, uses binary heap data structure, not stable | -->
@@ -36,13 +36,13 @@ In [algorithms.py](./algorithms.py).
 
 > [!NOTE]
 > Quick Sort worst case is bad and can happen as most implementation are entirely deterministic.  
-> Luckily, we can force it to run in quadratic time to avoid this and always get avarage case!
-> Refer to [Killing Quicksort](https://research.swtch.com/) by Russ Cox.
+> Luckily, we can force it to run in quadratic time to avoid this and always get avarage case!  
+> Refer to [Killing Quicksort](https://research.swtch.com/qsort) by Russ Cox.
 
 ### Additional
 | Algorithm | Time Complexity | Notes |
 |-----------|-----------------|-------|
-| Factorial | O(n) | Recursive computation of n! |
+| Factorial | O(n) | Recursive computation |
 | Ackermann | Non-elementary (super-exponential) | Grows faster then any other primitive recursive function |
 <!-- | Traveling Salesman | O(n! * n^2) | A classic computing difficult problem | -->
 <!-- | Fibonacci | O(2^n) naive, O(n) DP | Exponential naive recursion | -->
@@ -100,21 +100,13 @@ Often used to implement graphs!
 | Deletion | O(1) | O(n) | Depends on collision resolution |
 
 #### Directed Graph
-A graph where nodes have directions.  
-Built using Hash Tables
+A type graph where nodes have directions.  
 
-#### Weighted Graph
-A graph where nodes have weights assigned to them.  
-Built using Hash Tables
+#### Weighted Graphs
+A type graph where nodes have weight assiged to them.
 
 ### Trees
-Graphs without cycles!
-
-| Operation | BST Average | BST Worst | Balanced Tree | Notes |
-|-----------|-------------|-----------|---------------|-------|
-| Search | O(log n) | O(n) | O(log n) | B-Tree+ used in SQLite |
-| Insert | O(log n) | O(n) | O(log n) | AVL, Red-Black trees |
-| Delete | O(log n) | O(n) | O(log n) | Self-balancing |
+A type of graph without cycles.
 
 #### Binary Trees
 Trees with no more than 2 children per node!
@@ -143,7 +135,8 @@ Compression algorithms like (Huffman coding) try to reduce the number of bits ne
 ```
 
 ## Real world
-Example, optimizing the time complexity for an important production API handler passing from the store to the database!
+Example, optimizing the time complexity for an important production API endpoint.  
+Passing from the handler to the store and the database!
 
 <!-- Damn, it would have been nice a computer calculated time complexity for us, can it? -->  
 <!-- Kind of with complexity analysis, benchmarking and profiling! -->
